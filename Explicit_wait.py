@@ -33,7 +33,8 @@ driver.find_element_by_xpath("//*[@id='gcw-flights-form-hp-flight']/div[8]/label
 
 # Explicit wait
 wait = WebDriverWait(driver, 10)
-element = wait.until(EC.element_to_be_clickable(By.XPATH("//*[@id='stopFilter_stops-O']")))
+element = wait.until(EC.element_to_be_clickable((By.XPATH,"//*[@id='stopFilter_stops-0']")))
+
 element.click()
 
 time.sleep(3)
