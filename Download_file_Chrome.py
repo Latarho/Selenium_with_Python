@@ -1,7 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+chromeOptions = Options()
+chromeOptions.add_experimental_option("prefs", {"download.defaul_directory": "D:\Downloads"})
 
 # Chrome
-driver = webdriver.Chrome(executable_path = "C:/Users/latar/chromedriver/chromedriver.exe")
+driver = webdriver.Chrome(executable_path = "C:/Users/latar/chromedriver/chromedriver.exe", chrome_options=chromeOptions)
 
 # Растянуть на всю ширину экрана (под разрешение экрана)
 driver.maximize_window()
